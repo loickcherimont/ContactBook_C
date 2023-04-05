@@ -76,16 +76,15 @@ int main(void)
         contact_counter++;
 
         printf("\nNEW CONTACT ADDED!\n");
-        printf("CONTACTS: %d", contact_counter);
 
         // Display all contacts
-        size_t current_size = sizeof(contact_book) / sizeof(Contact);
+        // size_t current_size = sizeof(contact_book) / sizeof(Contact);
 
         printf("***************** ALL YOUR CONTACTS *****************\n");
 
-        printf("\nYOU HAVE ACTUALLY %d CONTACTS\n", current_size);
+        printf("\nYOU HAVE ACTUALLY %d CONTACTS\n", contact_counter);
 
-        for (int i = 0; i < current_size; i++)
+        for (int i = 0; i < contact_counter; i++)
         {
             printf("==================================================================\n");
             printf("Phone number: %s\n", contact_book[i].phone_number);
@@ -107,13 +106,13 @@ int main(void)
 
     case 4: // OK
         // Display all contacts
-        current_size = sizeof(contact_book) / sizeof(Contact);
+        // current_size = sizeof(contact_book) / sizeof(Contact);
 
         printf("***************** ALL YOUR CONTACTS *****************\n");
 
-        printf("\nYOU HAVE ACTUALLY %d CONTACTS\n", current_size);
+        printf("\nYOU HAVE ACTUALLY %d CONTACTS\n", contact_counter);
 
-        for (int i = 0; i < current_size; i++)
+        for (int i = 0; i < contact_counter; i++)
         {
             printf("==================================================================\n");
             printf("Phone number: %s\n", contact_book[i].phone_number);
