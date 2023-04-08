@@ -80,7 +80,7 @@ Go on the Web and follow a tutorial to setup a C environment on your laptop.
 2. Go in it and run it
 ```bash
 cd ContactBook_C
-gcc contact_book -o contact_book.exe && contact_book.exe
+gcc contact_book.c -o contact_book.exe && contact_book.exe
 ```
 3. Here you are under your eyes, the **main menu**
 
