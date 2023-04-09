@@ -4,6 +4,7 @@
 
 // ************************** STRUCTS **************************
 // Define what is a contact
+// Use Contact type instead of struct Contact type
 typedef struct
 {
     int id;
@@ -17,8 +18,7 @@ typedef struct
 Contact contact_book[10];
 
 // ************************** FUNCTIONS **************************
-
-// Fill by default contact book
+// Fill by default contact_book
 // Returns updated contact_counter
 int init_book(Contact contact_book[], int book_capacity, int contact_counter)
 {
@@ -54,8 +54,8 @@ void display_contacts(Contact contact_book[], int book_capacity)
     }
 }
 
-// Display user selection
-void display_target_contact(Contact contact_book[], int target_id) {
+void display_target_contact(Contact contact_book[], int target_id) 
+{
     printf("\n==================================================================\n");
         printf("*** CONTACT No. %d ***\n", contact_book[target_id].id);
         printf("Phone number: %s\n", contact_book[target_id].phone_number);
@@ -66,7 +66,7 @@ void display_target_contact(Contact contact_book[], int target_id) {
     printf("\n==================================================================\n");
 }
 
-// Display all available options in App
+// Display main menu
 void display_options()
 {
 
@@ -109,7 +109,7 @@ void user_complete_inputs(char phone_number[], char first_name[], char last_name
     strcpy(contact_book[contact_counter].email, email);
 }
 
-// ************************** MAIN FUNCTION **************************
+// ************************** MAIN **************************
 int main(void)
 {
     // Set default values
@@ -154,7 +154,7 @@ int main(void)
             scanf("%d", &id_to_remove);
 
             // Transform id into index
-            // To fetch the corresponding contact in contact_book
+            // To fetch the corresponding contact in contact_book struct array
             id_to_remove--;
 
             printf("\nYOU WANT TO REMOVE THIS CONTACT:\n");
@@ -180,7 +180,8 @@ int main(void)
                 printf("\n *** DELETION CANCELLED! *** \n");
             break;
 
-        case 3: // Modify a contact
+        case 3:
+            printf("***************** MODIFY A CONTACT *****************\n");
             int id_to_modify;
             char updated_firstname[20];
             char updated_lastname[20];
@@ -188,7 +189,6 @@ int main(void)
             char updated_address[30];
             char updated_email[30];
 
-            printf("***************** MODIFY A CONTACT *****************\n");
             display_contacts(contact_book, 10);
 
             printf("Enter the contact rank (1, 2, ...) to modify: ");
@@ -208,11 +208,11 @@ int main(void)
 
             break;
 
-        case 4: // Show all the contacts
+        case 4: // Show all the entire contact_book
             display_contacts(contact_book, 10);
             break;
 
-        default: // FEATURES: HIGH ERROR HANDLING
+        default:
             puts("Sorry, this option is not available!");
             break;
         }
