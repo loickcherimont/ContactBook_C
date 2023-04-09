@@ -8,10 +8,7 @@
 
 # ContactBook_C
 
-
-
-<!-- TODO: Add a screen of contact app -->
-![MainImageForProject](https://placehold.co/500x300)
+![App screenshot](/assets/img/app_screen.png)
 
 <!-- 
     INTRODUCTION
@@ -20,7 +17,7 @@
     Ex: This is a Front-End project made with HTML, CSS for design and JavaScript to work on client-side validation (Constraint API)
 -->
 Memorial of **Epitech Open Doors** Day at Saint-André from Reunion island on 2022-04-02.
-This repository contains a **contact book app** built on a week using `C` language.
+This repository contains a **contact book cli app** built on a week using `C` language.
 
 <!-- 
     TOOLS
@@ -44,12 +41,6 @@ This repository contains a **contact book app** built on a week using `C` langua
 ## :warning: Prerequisites
 To run at maximum correctly this app, you need to setup a C environment on your laptop.
 Go on the Web and follow a tutorial to setup a C environment on your laptop.
-
-```bash
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-# Lorem ipsum dolor sit amet
-```
 
 <!-- 
     SETUP
@@ -80,12 +71,12 @@ Go on the Web and follow a tutorial to setup a C environment on your laptop.
 2. Go in it and run it
 ```bash
 cd ContactBook_C
-gcc contact_book -o contact_book.exe && contact_book.exe
+gcc contact_book.c -o contact_book.exe && contact_book.exe
 ```
-3. Here you are under your eyes, the **main menu**
+3. Here you are in the **main menu**
 
-<!-- TODO: Add a screen of contact app -->
-![ExpectResultsAfterSetup](https://placehold.co/300x200)
+
+![Main Menu of Contact Book App](/assets/img/main_menu.png)
 
 <!-- 
     FEATURES
@@ -97,9 +88,7 @@ gcc contact_book -o contact_book.exe && contact_book.exe
 -->
 
 ## :rocket: Features
-- Lorem ipsum dolor sit amet
-- Lorem ipsum dolor sit amet
-- Lorem ipsum dolor sit amet
+- Handle highly errors
 
 <!-- 
     LICENSE
@@ -112,4 +101,3 @@ gcc contact_book -o contact_book.exe && contact_book.exe
 ## :key: License
 Made by Loïck Chérimont   
 Under MIT License 
-
