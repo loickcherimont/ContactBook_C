@@ -66,12 +66,14 @@ Go on the Web and follow a tutorial to setup a C environment on your laptop.
     ![Main page of the application](assets/images/readme_images/mainpage.png)
 -->
 
-## :inbox_tray: Setup
-1. Download the project and unzip it
-2. Go in it and run it
+## :inbox_tray: Setup for contributions
+
+1. Open a terminal and run the following **in function of your environment**
 ```bash
 cd ContactBook_C
-gcc contact_book.c -o contact_book.exe && contact_book.exe
+gcc contact_book.c -o contact_book.exe && contact_book.exe # For Windows
+# OR
+gcc contact_book.c -o contact_book && ./contact_book # For Linux distributions
 ```
 3. Here you are in the **main menu**
 
