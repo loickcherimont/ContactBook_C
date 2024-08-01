@@ -89,11 +89,13 @@ int get_user_option()
 void user_complete_inputs(char phone_number[], char first_name[], char last_name[], char address[], char email[], int contact_counter)
 {
     printf("Enter the firstname: ");
-    scanf("%s", first_name);
+    // scanf("%s", first_name);
+    fgets(first_name, strlen(first_name), stdin); // to get first names
     strcpy(contact_book[contact_counter].first_name, first_name);
 
     printf("Enter the lastname: ");
-    scanf("%s", last_name);
+    // scanf("%s", last_name);
+    fgets(last_name, strlen(last_name), stdin); // to get last names with spaces
     strcpy(contact_book[contact_counter].last_name, last_name);
 
     printf("Enter the phone number: ");
@@ -101,7 +103,7 @@ void user_complete_inputs(char phone_number[], char first_name[], char last_name
     strcpy(contact_book[contact_counter].phone_number, phone_number);
 
     printf("Enter the address: ");
-    scanf("%s", address);
+    fgets(address, strlen(address), stdin); // to get addresses with spaces
     strcpy(contact_book[contact_counter].address, address);
 
     printf("Enter the email: ");
@@ -123,8 +125,7 @@ int main(void)
     {
         display_options();
 
-        // Process in function of user option
-        switch (get_user_option())
+        switch (get_user_option()) // Process in function of user option
         {
         case 1: // Add a new contact using user inputs
             char new_phone_number[11];
